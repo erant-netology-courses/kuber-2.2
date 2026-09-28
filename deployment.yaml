@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: two-containers
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: two-containers
+  template:
+    metadata:
+      labels:
+        app: two-containers
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+        volumeMounts:
+        - name: nginx-config
+          mountPath: /usr/share/nginx/html/index.html
+          subPath: index.html
+      - name: network-multitool
+        image: wbitt/network-multitool
+        envFrom:
+        - configMapRef:
+            name: multitool-config
+      volumes:
+      - name: nginx-config
+        configMap:
+          name: nginx-config
