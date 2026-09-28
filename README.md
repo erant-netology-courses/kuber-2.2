@@ -2,9 +2,7 @@
 
 ## Задание 1
 
-<img width="760" height="1260" alt="image" src="https://github.com/erant-netology-courses/kuber-2.1/blob/main/1_describe_1.jpg?raw=true" />
-
-<img width="960" height="560" alt="image" src="https://github.com/erant-netology-courses/kuber-2.1/blob/main/1_describe_2.jpg?raw=true" />
+<img width="860" height="560" alt="image" src="https://github.com/erant-netology-courses/kuber-2.2/blob/main/1.jpg?raw=true" />
 
 
 ## Задание 2
