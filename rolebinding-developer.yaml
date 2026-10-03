@@ -1,0 +1,13 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: erant-pod-viewer
+  namespace: default
+subjects:
+- kind: User
+  name: erant
+  apiGroup: rbac.authorization.k8s.io
+roleRef:
+  kind: Role
+  name: pod-viewer-changed
+  apiGroup: rbac.authorization.k8s.io
